@@ -1,20 +1,26 @@
 # Warning
 
-Author is practicing readme-driven-development. Most of the this doesn't exist. :)
+Author is practicing readme-driven-development. Most of this doesn't exist. :)
 
 # Repo Health
 
-As the open source community grows, we need tooling for monitoring the health of source code and it's repositories. This project aims to provide guidelines for what makes an open source project healthy. Open Source contributors can use these guidelines to improve the quality of their project, and people looking at software can get insight on the robustness of a project.
+The open source community needs tooling for improving and monitoring the health of projects. Repo Health aims to provide guidelines for what makes an open source project healthy. Open Source contributors can use these guidelines to improve the quality of their project, and people looking at software can get insight on the robustness of a project.
 
 # Usage
 * Go to http://repohealth.com and enter the github repo to check. It will scan the repo and provide a report for you
+
+Or
+
 * Clone this repo and run it locally
 	`node report.js --repo $repo`
+	
+Or
+
 * Run a copy of repohealth.com yourself (clone this repo and run `node site.js`)
 
 
 # Health Report Factors
-Quality is highly subjective. Stylistic differences abound. The challenge to this project is to identify a set of 
+Quality is highly subjective. Stylistic differences abound. The challenge to this project is to identify a set of common best practices that open source projects should have, and make recommendations so that their project is better. This will likely result in spirited debates over the definition of best practices, but that's part of the fun. :)
 
 ### Configuration
 If no repohealth configuration file is found and no project type is specified, it tries to determine the project type dynamically. 
@@ -22,9 +28,11 @@ If no repohealth configuration file is found and no project type is specified, i
 If a repohealth configuration file is found (`.repo-health.json` in the project root), then the contributors can specify a different configuration than the default. For example, to let repo-health know that the `README` is actually called `read_me`:
 
 ```
-files
-	README
-		read_me
+{
+	"files": {
+		"README": "read_me"
+	}
+}
 ```
 
 To see a sample configuration file, check out [this repository's .repo-health.json](.repo_health) file. To view the default configuration files, see [/configs/](configs/).
