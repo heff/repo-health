@@ -36,33 +36,36 @@ Quality is highly subjective. Stylistic differences abound. The challenge to thi
 **Important note**: This isn't absolute.  Just because one project has a longer commit history than another project doesn't mean it's better code. By using a little pattern recognition, we can identify elements that make a repository better.
 
 
-
-To see a sample configuration file, check out [this repository's .repo-health.json](.repo_health) file. To view the default configuration files, see [/configs/](configs/).
-
 ### All projects
 
 ##### Static analysis
 
-* README file
-* LICENSE
-* .gitignore for common temp files
+Check the repo to see if the following files exist. Note that repo health will try to find them in common locations, or the [configuration file](#configuration-file) can be used to point it to alternate locations.
+
+If these are not found, recommendations will be made along with suggestions and examples.
+
+* README file exists and is at least x characters long
+* LICENSE file exists
+* .gitignore exists and lists out common temp files
 	* .swp (vim)
 	* .DS_Store (mac)
 * .editorconfig
 	* Code follows spacing rules 
 * History/Changelog
 * Getting Started/Usage/Example code/Demo
-* Code passes a static processor. that config file is found
+* Code passes a static processor (the appropriate config file is found, such as .jshintrc)
 * Some automated build tool (Make, grunt, Rake, etc.)
-* Contributors listed somewhere
+* Contributors listed 
 * TODOs/roadmap
 * Dependencies/Requirements
-* Using
+* Using (people using the project)
 * Separate tags/branches for releases
 * Documentation (doc folder or wiki)
 	* How much is enough? ratio to code? 
 
 ##### Community health
+
+See how healthy the project is by gauging community involvement
 
 * Last commit (actively maintained?)
 * Number of committers (one man show or )
@@ -73,13 +76,12 @@ To see a sample configuration file, check out [this repository's .repo-health.js
 * Maturity (time since first commit, number of commits)
 
 ##### Tests
-* Automated tests on every commit
-
+* Automated tests on every commit (look for travis to be set up)
 
 ### Language specific
 
 ##### node.js
-* on npm
+* Project is on npm
 * package.json
     * Valid...
     * Folders match package.json spec
@@ -90,10 +92,12 @@ To see a sample configuration file, check out [this repository's .repo-health.js
         * dist
 
 ##### python
-* on pypi
+* Project on pypi
 * requirements.pip
 
-##### node.js
+##### perl
+* Project is on cpan
+* "use strict"
 
 Your favorite language not listed? Please add it!
 
@@ -110,6 +114,8 @@ If a repohealth configuration file is found (`.repo-health.json` in the project 
 }
 ```
 
+To see a sample configuration file, check out [this repository's .repo-health.json](.repo_health) file. To view the default configuration files, see [/languages/](languages/).
+
 # TODO
 
 #### API
@@ -125,5 +131,6 @@ If a repohealth configuration file is found (`.repo-health.json` in the project 
 * Input a repo, it will scan it and report back
 * Last x repos' scanned
 * Hall of shame/fame
-* Track history of score
+* Track history score of repo over time
+* See the health of popular projects (jQuery, backbone, yeoman)
 
