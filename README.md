@@ -68,26 +68,35 @@ To see a sample configuration file, check out [this repository's .repo-health.js
 ### Language specific
 
 ##### node.js
-* package.json
 * on npm
-* Folders match package.json spec
-	* doc
-	* src
-	* lib
-	* test
-	* dist
-	
+* package.json
+    * Valid...
+    * Folders match package.json spec
+        * doc
+        * src
+        * lib
+        * test
+        * dist
+
 ##### python
-* pypi
+* on pypi
+* requirements.pip
 
 ##### node.js
 
-
 Your favorite language not listed? Please add it!
 
-## repohealth.com
+# Endpoints
 
-#### Features 
+#### API
+* Add a repo to be scanned
+* Trigger a scan
+* Get details about repo health
+* Get history of repo health
+* Get previous health
+* Serve up an image with the current score, #A-F report card style?
+
+#### repohealth.com
 
 * Input a repo, it will scan it and report back
 * Last x repos' scanned
