@@ -72,8 +72,21 @@ See how healthy the project is by gauging community involvement
 * Number of watchers
 * Number of forks
 * Issues/Support
+	* Percent of issues with a response from a committer
+	* Average time to first issue response
+	* Average time to close an issue
+* Pull requests
+	* Percent of pull requests responded to
+	* Average time to first pull request response
+	* Percent of pull requests merged
 * A mailing list
 * Maturity (time since first commit, number of commits)
+* Stack Overflow (via SO tag set in config. More project health than just repo health.)
+	* Number of tagged questions
+	* Unanswered / Total Tagged
+	* Number of answerers (http://stackoverflow.com/tags/[TAG]/topusers)
+	* Answerers / Askers
+
 
 ##### Tests
 * Automated tests on every commit (look for travis to be set up)
